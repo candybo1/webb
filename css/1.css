@@ -1,0 +1,174 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.form{
+	margin: 0 auto;
+	width: 1200px;
+	height: 390px;
+	position: relative;
+}
+.name{
+	position: absolute;
+	left: 250px;
+	top: 70px;
+	font-size: 20px;
+}
+.name>input{
+	width: 325px;
+	height: 55px;
+}
+.age{
+	position: absolute;
+	left: 250px;
+	top: 140px;
+	font-size: 20px;
+}
+.age>input{
+	width: 325px;
+	height: 55px;
+}
+.sex{
+	position: absolute;
+	left: 250px;
+	top: 210px;
+	font-size: 20px;
+}
+.sex>select{
+	position: relative;
+	left: -6px;
+}
+.chuangj{
+	width: 90px;
+	height: 52px;
+	color: white;
+	background-color: rgb(0,154,97);
+	position: absolute;
+	left: 308px;
+	top: 270px;
+	border-radius: 10%;
+	font-size: 25px;
+	text-align: center;
+}
+.biaoge{
+	width: 1202px;
+	margin: -1px auto;
+}
+.onetr{
+	height: 50px;
+	background-color: rgb(0,154,97);
+	text-align: center;
+	color: white;
+	font-weight: 500;
+}
+.twotr{
+	height: 75px;
+    color: black;
+	text-align: center;
+}
+.xiugai{
+	width: 90px;
+	height: 52px;
+	color: white;
+	background-color: rgb(0,154,97);
+	border-radius: 10%;
+	font-size: 25px;
+	text-align: center;
+}
+.shanchu{
+	width: 90px;
+	height: 52px;
+	color: white;
+	background-color: rgb(0,154,97);
+	border-radius: 10%;
+	font-size: 25px;
+	text-align: center;
+}
+.shadow{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background-color: rgba(128,128,128,0.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.xgbox{
+	width: 55%;
+	height: 60%;
+	background-color: white;
+	position: fixed;
+	left: 22.5%;
+	top: 20%;
+}
+.xgbox>p{
+	position: relative;
+	font-size: 25px;
+	top: 20px;
+	left: 20px;
+}
+.xgname{
+	position: relative;
+	left: 150px;
+	top: 70px;
+	font-size: 20px;
+}
+.xgname>input{
+	width: 730px;
+	height: 70px;
+}
+.xgage{
+	position: relative;
+	left: 150px;
+	top: 140px;
+	font-size: 20px;
+}
+.xgage>input{
+	width: 730px;
+	height: 70px;
+}
+.xgsex{
+	position: relative;
+	left: 150px;
+	top: 210px;
+	font-size: 20px;
+}
+.xgsex>select{
+	position: relative;
+	left: -6px;
+}
+.xgbox>span{
+	position: absolute;
+	font-size: 30px;
+	right: 2px;
+	top: -10px;
+}
+.queding{
+	width: 130px;
+	height: 70px;
+	color: skyblue;
+	border: 1px solid skyblue;
+	border-radius: 10%;
+	font-size: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 150px;
+	bottom: 50px;
+}
+.quixiao{
+	width: 130px;
+	height: 70px;
+	color: skyblue;
+	border: 1px solid skyblue;
+	border-radius: 10%;
+	font-size: 25px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	left: 750px;
+	bottom: 50px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>魔法大全</title>
+		<link rel="stylesheet" type="text/css" href="css/magic.css">
+	</head>
+	<body>
+	<div class="left">
+		魔法名称：<input type="text" placeholder="火焰熊熊(示例)"/><br>
+		魔法类别：<input type="text" placeholder="强力咒语"/><br>
+		魔力消耗：<input type="text" placeholder="四点费用"/><br>
+		魔法功能：<input type="text" placeholder="召唤一团火焰"/><br>
+		<button type="button" onclick="add()">施法</button>
+		<button type="button" onclick="reset()">一忘皆空</button>
+
+		<table border="" cellspacing="" cellpadding="">
+			<tr>
+				<th>魔法名称</th>
+				<th>魔法类别</th>
+				<th>魔力消耗</th>
+				<th>魔法功能</th>
+				<th>操作</th>
+			</tr>
+		</table>
+		</div>
+	<div class="right">
+	<p>一个示例：即可自由发挥</p>
+	<img src="img/fire.jpg">
+	<p>火焰熊熊 咒语卡 四费</p>
+	</div>
+
+		<script type="text/javascript">
+			let myinp = document.querySelectorAll("input")
+			let mytab = document.querySelector("table")
+
+
+			function reset() {
+				for (let i = 0; i < myinp.length; i++) {
+					myinp[i].value = ""
+				}
+			}
+
+			function add() {
+				let change = true
+				let chabtn = document.createElement("input")
+				chabtn.setAttribute("type", "button")
+				chabtn.setAttribute("value", "修改")
+
+				let delbtn = document.createElement("input")
+				delbtn.setAttribute("type", "button")
+				delbtn.setAttribute("value", "删除")
+
+				let newtr = document.createElement("tr")
+				let newtd1 = document.createElement("td")
+				newtd1.innerHTML = myinp[0].value
+				let newtd2 = document.createElement("td")
+				newtd2.innerHTML = myinp[1].value
+				let newtd3 = document.createElement("td")
+				newtd3.innerHTML = myinp[2].value
+				let newtd4 = document.createElement("td")
+				newtd4.innerHTML = myinp[3].value
+				let newtd5 = document.createElement("td")
+
+
+				newtd5.appendChild(chabtn)
+				newtd5.appendChild(delbtn)
+				newtr.appendChild(newtd1)
+				newtr.appendChild(newtd2)
+				newtr.appendChild(newtd3)
+				newtr.appendChild(newtd4)
+				newtr.appendChild(newtd5)
+				mytab.appendChild(newtr)
+
+				delbtn.onclick = function() {
+					this.parentNode.parentNode.remove()
+				}
+
+				chabtn.onclick = function() {
+					if (change) {
+						for (let i = 0; i < this.parentNode.parentNode.children.length - 1; i++) {
+							this.parentNode.parentNode.children[i].innerHTML =
+								`<input type="text" value="${this.parentNode.parentNode.children[i].innerHTML}"></input>`
+						}
+						chabtn.value = "保存"
+						change = false
+					} else {
+						for (let i = 0; i < this.parentNode.parentNode.children.length - 1; i++) {
+							this.parentNode.parentNode.children[i].innerHTML = this.parentNode.parentNode.children[i].children[0].value
+						}
+						chabtn.value = "修改"
+						change = true
+					}
+				}
+			}
+		</script>
+	</body>
+</html>
+

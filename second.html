@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta name="author" content="cyb">
+        <title>秘闻：第二次巫师大战</title>
+		    <script src="jquery-3.6.1.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/second.css">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    </head>
+
+<body>
+<div class="page">
+    <div class="header">血与泪的第二次巫师大战</div>
+    <div class="main">
+    <div class="left"><h2>永远悼念</h2>
+
+	<div class="imgBox">
+    <img class="img-slide img1" src="img/snp.jpg" alt="1">
+    <img class="img-slide img2" src="img/abs.jpg" alt="2">
+    <img class="img-slide img3" src="img/xtlx.jpg" alt="3">
+	</div>
+<script type="text/javascript">
+    var index=0;
+    function ChangeImg() {
+        index++;
+        var a=document.getElementsByClassName("img-slide");
+        if(index>=a.length) index=0;
+        for(var i=0;i<a.length;i++){
+            a[i].style.display='none';
+        }
+        a[index].style.display='block';
+    }
+    //设置定时器，每隔两秒切换一张图片
+    setInterval(ChangeImg,1500);
+</script>
+
+      </div>
+      <div class="right"><h2>咏叹：</h2>
+            <marquee direction=up height=400px scrolldelay="30">
+            <div align="center">
+              <p>西弗勒斯·斯内普:一个光辉而璀璨的名字</p>
+              <p>当所有人都认为你是那个叛徒</p>
+              <p>却不知在这背后你所做的这些牺牲</p>
+              <p>一句“ALWAYS”自始至终，永远不朽</p>
+              <p>他是谁？他是我见过最勇敢的人</p><br>
+
+              <p>阿不思·邓布利多</p>
+              <p>你是最伟大的校长</p>
+              <p>有邓布利多在，霍格沃兹就是世界上最安全的地方</p>
+              <p>晚安，校长</p><br>
+
+              <p>小天狼星·布莱克</p>
+              <p>我们最慈爱的教父</p>
+              <p>虽年少轻狂但同样义气方刚</p>
+              <p>“等大战结束我们就做家人把”</p>
+              <p>这次，一点</p><br>
+
+              <p>还有许许多多大战中牺牲的伟大巫师们</p>
+              <p>你们因爱而不朽</p>
+              </div>
+              </marquee>
+        </div>
+      </div>
+      <div style="clear:both;"></div>
+      <div class="footer">铭记</div>
+    </div>
+<!-- <script>
+$('div').hide();
+</script> -->
+</body>
+
+</html>
